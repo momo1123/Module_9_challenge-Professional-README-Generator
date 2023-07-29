@@ -67,7 +67,7 @@ inquirer
     .prompt(questions)
     .then((answers) => {
     const html = getHtml(answers);
-    fs.writeFile('README_TESTING.md',html,(err) =>{
+    fs.writeFile('README_TESTING',html,(err) =>{
         if (err) {
             console.log(err);
         } else {
@@ -82,26 +82,28 @@ const getHtml = (answers) => {
     const {name, description, installation, usage, contribution, testing} = answers;
     // The return statement here returns the output as given in the Template Literal 
     return`
+    
+    # **TILE:${name}**
+
+    # DESCRIPTION:${description}
+
+
+    # INSTALLATION STEPS:${installation}
+
+
+    # USAGE:${usage}
+
+    # CONTRIBUTION RULES:${contribution}
+
+
+    # TESTING INSTRUCTIONS:${testing}
+
+    # LICENSE:
+    
+    # QUESTIONS:
+
     Table of Contents
-    TILE:${name}
 
-    DESCRIPTION:${description}
-
-
-    INSTALLATION STEPS:${installation}
-
-
-    USAGE:${usage}
-
-    CONTRIBUTION RULES:${contribution}
-
-
-    TESTING INSTRUCTIONS:${testing}
-
-    LICENSE:
-    
-    QUESTIONS:
-    
     `
 }
 // TODO: Create a function to write README file

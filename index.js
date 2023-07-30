@@ -1,21 +1,36 @@
 // ## Acceptance Criteria
 
 // ```md
-// GIVEN a command-line application that accepts user input - DONE
-// WHEN I am prompted for information about my application repository - Done
-// THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions- Done
+// GIVEN a command-line application that accepts user input
+// - DONE
+// WHEN I am prompted for information about my application repository
+// - DONE
+// THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+// - DONE
 // WHEN I enter my project title
+// - DONE
 // THEN this is displayed as the title of the README
+// - DONE
 // WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+// - DONE
 // THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+// - DONE
 // WHEN I choose a license for my application from a list of options
+// - DONE
 // THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+// - DONE
 // WHEN I enter my GitHub username
+// - DONE
 // THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
+// - DONE
 // WHEN I enter my email address
+// - DONE
 // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+// - DONE
 // WHEN I click on the links in the Table of Contents
+// - DONE
 // THEN I am taken to the corresponding section of the README
+// - DONE
 
 // Using the node packages 
 const fs = require('fs'); // Used to create files locally
@@ -61,13 +76,40 @@ const questions = [{
     message: "Provide testing instructions for your project: ",
     name: "testing"
 },
+{
+    // Username needed for github links
+    type: "input",
+    message: "What is your username?",
+    name: "qQuestions"
+},
+{
+    type: "input",
+    message: "Enter your email:",
+    name: "email"
+},
+{
+    // List of Github Licenses
+    type: "rawlist",
+    message: "Choose your github licensing: ",
+    choices: ["Eclipse Public License 1.0 | epl-1.0",
+    "Eclipse Public License 2.0 | epl-2.0",
+    "European Union Public License 1.1 | eupl-1.1",
+    "GNU Affero General Public License v3.0 | agpl-3.0",
+    "GNU General Public License family | gpl",
+    "GNU General Public License v2.0 | gpl-2.0",
+    "GNU General Public License v3.0 | gpl-3.0",
+    "GNU Lesser General Public License family | lgpl",
+    "GNU Lesser General Public License v2.1 | lgpl-2.1",
+    "GNU Lesser General Public License v3.0 | lgpl-3.0"],
+    name: "license"
+},
 ];
-// Create function that creates Title,Description,etc in the Readme with title font
+// Create function that creates Title,Description,etc in the Readme
 inquirer
     .prompt(questions)
     .then((answers) => {
     const html = getHtml(answers);
-    fs.writeFile('README_TESTING',html,(err) =>{
+    fs.writeFile('README.md',html,(err) =>{
         if (err) {
             console.log(err);
         } else {
@@ -77,40 +119,59 @@ inquirer
     )
 
 });
+
 // This arrow function deconstrucs the objects from answers
 const getHtml = (answers) => {
-    const {name, description, installation, usage, contribution, testing} = answers;
+    const {name, description, installation, usage, contribution, testing, license, qQuestions, email} = answers;
+    // This if statement will put a badhe if a licnese is selected
+
     // The return statement here returns the output as given in the Template Literal 
     return`
+<a href='https://img.shields.io/badge/Liense:${license}-100000?style=plastic&logo=License&logoColor=536C51&labelColor=black&color=black' target="_blank"><img alt='License' src='https://img.shields.io/badge/License-100000?style=plastic&logo=License&logoColor=F4F4F4&labelColor=4C2626&color=4C2626'/></a>
+
+# TILE: ${name}
+
+
+### Table of Content
+- [Description](#description)
+- [Installation](#installation-steps)
+- [Usage](#usage)
+- [Contribution](#contribution-rules)
+- [Test](#testing-instructions)
+- [License](#license)
+- [Questions](#questions)
+
+## DESCRIPTION
+${description}
+
+## INSTALLATION STEPS
+${installation}
+
+
+## USAGE
+${usage}
+
+## CONTRIBUTION RULES
+${contribution}
+
+
+## TESTING INSTRUCTIONS
+${testing}
+
+## LICENSE
+<a href='' target="_blank"><img alt='License' src='https://img.shields.io/badge/Liense:${license}-100000?style=plastic&logo=License&logoColor=536C51&labelColor=black&color=black'/></a>
+
+<a href='' target="_blank"><img alt='License' src='https://img.shields.io/badge/License: ${license}-100000?style=plastic&logo=License&logoColor=F4F4F4&labelColor=4C2626&color=4C2626'/></a>
+
     
-    # **TILE:${name}**
+## QUESTIONS
+Github Profile: https://github.com/${qQuestions}
 
-    # DESCRIPTION:${description}
+Github Repositories: https://github.com/${qQuestions}?tab=repositories
 
+If you have additional questions you can reach me at
+    ${email}
 
-    # INSTALLATION STEPS:${installation}
-
-
-    # USAGE:${usage}
-
-    # CONTRIBUTION RULES:${contribution}
-
-
-    # TESTING INSTRUCTIONS:${testing}
-
-    # LICENSE:
-    
-    # QUESTIONS:
-
-    Table of Contents
 
     `
 }
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) { }
-
-// TODO: Create a function to initialize app
-// function init() { }
-
-// Function call to initialize app
-// init();

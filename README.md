@@ -1,7 +1,6 @@
 
-<a href='https://img.shields.io/badge/Liense:Eclipse Public License 1.0 | epl-1.0-100000?style=plastic&logo=License&logoColor=536C51&labelColor=black&color=black' target="_blank"><img alt='License' src='https://img.shields.io/badge/License-100000?style=plastic&logo=License&logoColor=F4F4F4&labelColor=4C2626&color=4C2626'/></a>
-
-# TILE: README GENERATOR
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# TILE: Readme Generator
 
 
 ### Table of Content
@@ -14,35 +13,33 @@
 - [Questions](#questions)
 
 ## DESCRIPTION
-This project uses FS and INQUIRER pacakges which work collaboratively to create a README.MD file. The readme file includes text taken from the user input.
+The Nodejs creates a Readme file using Inquirer and Fs.
 
 ## INSTALLATION STEPS
-Install NPM (package manager) and create your package.json file with 'node init' and then install the paclagkk
+You need to install NPM which then will be used to install packages 'Inquirer' and it's dependencies.
 
 
 ## USAGE
-
+Usefull information.....
 
 ## CONTRIBUTION RULES
-
+This is a public project, if you need to contribute please see Questions section.
 
 
 ## TESTING INSTRUCTIONS
-
+You can test my application using the already built code.
 
 ## LICENSE
-<a href='' target="_blank"><img alt='License' src='https://img.shields.io/badge/Liense:Eclipse Public License 1.0 | epl-1.0-100000?style=plastic&logo=License&logoColor=536C51&labelColor=black&color=black'/></a>
-
-<a href='' target="_blank"><img alt='License' src='https://img.shields.io/badge/License: Eclipse Public License 1.0 | epl-1.0-100000?style=plastic&logo=License&logoColor=F4F4F4&labelColor=4C2626&color=4C2626'/></a>
+Apache 2.0 License
 
     
 ## QUESTIONS
-Github Profile: https://github.com/
+Github Profile: https://github.com/momo1123
 
-Github Repositories: https://github.com/?tab=repositories
+Github Repositories: https://github.com/momo1123?tab=repositories
 
 If you have additional questions you can reach me at
-    
+    something@gmail.com
 
 
     

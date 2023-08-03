@@ -1,5 +1,6 @@
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # TILE: Readme Generator
 
 
@@ -20,17 +21,17 @@ You need to install NPM which then will be used to install packages 'Inquirer' a
 
 
 ## USAGE
-Usefull information.....
+Use at your own discretion? 
 
 ## CONTRIBUTION RULES
 This is a public project, if you need to contribute please see Questions section.
 
 
 ## TESTING INSTRUCTIONS
-You can test my application using the already built code.
+You can test my application using the already built code. (you can trust me ;) )
 
 ## LICENSE
-Apache 2.0 License
+The MIT License
 
     
 ## QUESTIONS
@@ -39,7 +40,9 @@ Github Profile: https://github.com/momo1123
 Github Repositories: https://github.com/momo1123?tab=repositories
 
 If you have additional questions you can reach me at
-    something@gmail.com
+something@gmail.com
 
+My video link is[link](https://drive.google.com/file/d/1cLScBtLCBv6wxZCZb-BX39ndaIGEdNax/view?usp=sharing)
 
+Use the following link if video is not working with the provided link [Google chrome extension](https://chrome.google.com/webstore/detail/total-privacy-for-chrome/eoclijfghiglinncpceohgaigfgnlbim?hl=en)
     

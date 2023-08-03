@@ -120,6 +120,8 @@ const getHtml = (answers) => {
     const apache = ("[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)");
     const MIT = ("[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)");
     const mozilla_public = ("[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)");
+    const my_media = (`My video link is[link](https://drive.google.com/file/d/1cLScBtLCBv6wxZCZb-BX39ndaIGEdNax/view?usp=sharing)`);
+    const extension = (`Use the following link if video is not working with the provided link [Google chrome extension](https://chrome.google.com/webstore/detail/total-privacy-for-chrome/eoclijfghiglinncpceohgaigfgnlbim?hl=en)`)
     if (license === "Apache 2.0 License") {
         return `
 ${apache}
@@ -162,9 +164,11 @@ Github Profile: https://github.com/${qQuestions}
 Github Repositories: https://github.com/${qQuestions}?tab=repositories
 
 If you have additional questions you can reach me at
-    ${email}
+${email}
 
+${my_media}
 
+${extension}
     `
     } else if (license === "The MIT License") {
         return `
@@ -209,9 +213,11 @@ Github Profile: https://github.com/${qQuestions}
 Github Repositories: https://github.com/${qQuestions}?tab=repositories
 
 If you have additional questions you can reach me at
-    ${email}
+${email}
 
+${my_media}
 
+${extension}
     `
 
     }else
@@ -259,7 +265,11 @@ Github Profile: https://github.com/${qQuestions}
 Github Repositories: https://github.com/${qQuestions}?tab=repositories
 
 If you have additional questions you can reach me at
-    ${email}
+${email}
+
+${my_media}
+
+${extension}
 
 
     `
